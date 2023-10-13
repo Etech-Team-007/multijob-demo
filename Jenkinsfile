@@ -22,13 +22,10 @@ pipeline {
 
         stage('3-Terence') {
             when {
-                branch 'feature/*' 
+                branch 'feature' 
             }
             steps {
-                
-				sh 'git checkout develop'
-                sh 'git merge ${env.BRANCH_NAME}'
-                sh 'git push origin develop'
+                echo 'Terence Fomenky'
             }
         }
 
@@ -47,9 +44,7 @@ pipeline {
             }
             steps {
                 
-                sh 'git checkout main'
-                sh 'git merge develop'
-                sh 'git push origin main'
+               echo 'Therese Meylam'
             }
         }
 
